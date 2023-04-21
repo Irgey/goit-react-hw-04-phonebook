@@ -18,14 +18,7 @@ export const App = () => {
     ];
   });
   const [filter, setFilter] = useState('');
-  useEffect(() => {
-    //componentDidMount()
-    const localStorageContacts = localStorage.getItem('contacts');
-    if (localStorageContacts) {
-      console.log(localStorageContacts);
-      setContacts(JSON.parse(localStorageContacts));
-    }
-  }, []);
+
   useEffect(() => {
     //componentDidUpdate(prevProps, prevState)
     localStorage.setItem('contacts', JSON.stringify(contacts));
